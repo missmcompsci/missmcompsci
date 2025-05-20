@@ -1,8 +1,7 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js"></script>
-
+    <script src="https://gftruj.github.io/webzamples/aframe/controls/oculus-thumbstick-controls.js"></script>
   </head>
   <body>
 <a-scene>
@@ -12,6 +11,13 @@
     <a-asset-item id="model" src="model.glb"></a-asset-item>
     <a-asset-item id="ice" src="ice.glb"></a-asset-item>
     <img id="sky" src="sky3.png">
+
+     <!-- Camera + controllers rig -->
+  <a-entity id="rig">
+    <a-camera position="0 1.6 0"></a-camera>
+    <a-entity oculus-touch-controls="hand: left" ></a-entity>
+    <a-entity oculus-touch-controls="hand: right" oculus-thumbstick-controls></a-entity>
+  </a-entity>
 
 
   </a-assets>
