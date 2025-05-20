@@ -3,7 +3,7 @@
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
   </head>
   <body>
-<a-scene sound="src:wind.mp3; autoplay: true; loop: true; positional: false">
+<a-scene>
   <a-entity camera="active: true" position="-0.01973 4.48485 9.17897" wasd-controls="" rotation="" look-controls="" aframe-injected=""></a-entity>
   <a-assets>
     <a-asset-item id="berg" src="berg.glb"></a-asset-item>
@@ -13,10 +13,12 @@
   </a-assets>
 
   <a-sky src="#sky"></a-sky>
-
+<a-entity id="river" geometry="primitive: plane" material="color: blue"
+          position="-10 0 0" sound="src:wind.mp3; autoplay: true"></a-entity>
+  
   <a-entity gltf-model="#berg" scale="10 10 10" position="-1.1 0 -1"> </a-entity>
   <a-entity gltf-model="#model" scale="10 10 10" position="0.08 0 -2"> </a-entity>
-  <a-entity gltf-model="#ice" scale="50 50 50" position="4 0.15 -1"> </a-entity>
+  <a-entity gltf-model="#ice" scale="100 100 100" position="4 0.15 -1"> </a-entity>
 
   </a-scene>
 </body>
